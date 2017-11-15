@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Welcome, Joe!</h2>
+    <div class="Quotes">
+        <h4>Quotable Quotes</h4>
+    </div>
+    <div class="Favorites">
+        <h4>Your Favorites</h4>
+    </div>
+    <div class="Contribute">
+        <h4>Contribute a Quote</h4>
+        <!-- insert form here with submit button -->
+        <form action="/scribble" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="six columns">
+                    <label for="first_name">Quote by: </label>
+                    <input class="u-full-width" type="text" id="quote_by" name="quote_by">
+                </div>
+                <div class="six columns">
+                    <label for="last_name">Message</label>
+                    <input class="u-full-width" type="text" id="message" name="message">
+                </div>
+
+                <input type="submit" class="button-primary" value="SUBMIT">
+        </form>
+        <a ref="/logout">Logout</a>
+        </div>
+</body>
+
+</html>
